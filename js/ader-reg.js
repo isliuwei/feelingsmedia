@@ -1,21 +1,40 @@
 
 
 angular.module('myApp',[])
-  .controller('FormController', function($scope){
-    // $scope.userdata = {
-    //   username: username
-    // }
-    // $scope.username="hhhh"
+  .controller('FormController', ['$scope',function($scope){
 
-
-    // setTimeout(function(){console.log($scope.username)},2000);
+      $scope.userdata = {};
 
 
 
-    $scope.submitForm = function(){
-      // console.log('表单提交了！');
+      //setInterval(function(){console.log($scope.userdata.captcha)},2000);
 
-      // console.log(userdata);
+
+
+      // $scope.submitForm = function(){
+      //   // console.log('表单提交了！');
+      //
+      //   // console.log(userdata);
+      // }
+      $scope.userdata.captcha1 ="bb";
+
+
+  }])
+  .directive('compare',function(){
+    var obj = {};
+    obj.strict = 'AE';
+    obj.scope = {
+      orgText: "=compare"
     }
+    obj.require = 'ngModel';
+    obj.link = function(sco,ele,att,con){
+      //console.log(con);
+      con.$validators.compare = function(v){
+        return v == sco.orgText;
+      }
+      sco.$watch('orgText',function(){
+        con.$validators;
+      })
+    }
+    return obj;
   })
-

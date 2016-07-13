@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>媒体咨询公司注册</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/company-reg.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="header" class="main-wrap">
+      <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
+      <div class="form-btn">
+        <span><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></span>
+        <span><a href="#">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></span>
+      </div>
+
+
+  </div>
+  <div class="container main-wrap">
+    <h2 class="title">公司注册</h2>
+    <div class="row" ng-controller="FormController">
+
+      <form class="form col-md-8 col-md-offset-2" name="signUpForm" ng-submit="submitForm()">
+
+
+        <!-- 登录名验证逻辑 -->
+        <div class="form-group">
+          <label for="username"><i class="fa fa-asterisk"></i>登录名</label>
+          <div class="wrap">
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="登录名由6-22位数字或字母组成"
+              name="username"
+              ng-pattern="/^[A-Za-z0-9]+$/"
+              ng-model="userdata.username"
+              ng-class="{
+                'error': signUpForm.username.$invalid && signUpForm.username.$touched,
+                'success':signUpForm.username.$valid }"
+              ng-minlength="6"
+              ng-maxlength="22"
+              required
+            >
+            <i class="fa fa-check tip right" ng-if="signUpForm.username.$valid && signUpForm.username.$touched"></i>
+            <i class="fa fa-remove tip wrong" ng-if="signUpForm.username.$invalid && signUpForm.username.$touched"></i>
+          </div>
+
+
+
+
+          <!-- 验证必填 $error.required -->
+          <P
+            class="error-info"
+            ng-if="signUpForm.username.$touched && signUpForm.username.$error.required"
+          >登录名不能为空</P>
+
+
+          <!-- 验证长度 $error.minlength $error.maxlength-->
+          <P
+            class="error-info"
+            ng-if="signUpForm.username.$touched && (signUpForm.username.$error.minlength || signUpForm.username.$error.maxlength)"
+          >登录名长度不合法，登录名长度6-22位</P>
+
+
+
+          <!-- 验证格式 $error.pattern-->
+          <P
+            class="error-info"
+            ng-if="signUpForm.username.$error.pattern && signUpForm.username.$touched"
+          >登录名含有非法字符，登录名由数字或字母组成</P>
+
+        </div>
+        <div class="form-group">
+            <label for="pwd1">密码</label>
+            <div class="wrap">
+              <input
+                type="password"
+                ng-minlength="6"
+                ng-maxlength="22"
+                class="form-control"
+                id="pwd1"
+                placeholder="密码由6-22位数字或字母组成"
+                required
+                ng-pattern="/^[A-Za-z0-9]+$/"
+                name="pwd1"
+                ng-model="userdata.pwd1"
+                ng-class="{
+                    'error': signUpForm.pwd1.$invalid && signUpForm.pwd1.$touched,
+                    'success': signUpForm.pwd1.$valid
+                }"
+              >
+              <i class="fa fa-check tip right" ng-if="signUpForm.pwd1.$valid && signUpForm.pwd1.$touched"></i>
+              <i class="fa fa-remove tip wrong" ng-if="signUpForm.pwd1.$invalid && signUpForm.pwd1.$touched"></i>
+          </div>
+          <p
+            class="error-info"
+            ng-if="signUpForm.pwd1.$error.required && signUpForm.pwd1.$touched">
+            输入密码不能为空</p>
+          <p
+            class="error-info"
+            ng-if="(signUpForm.pwd1.$error.minlength || signUpForm.pwd1.$error.maxlength) && signUpForm.pwd1.$touched">
+            输入密码长度不合法,密码长度6-22位</p>
+          <p
+            class="error-info"
+            ng-if="signUpForm.pwd1.$error.pattern && signUpForm.pwd1.$touched">
+            密码含有非法字符，密码由数字或字母组成</p>
+        </div>
+        <div class="form-group">
+          <label for="pwd2">确认密码</label>
+          <div class="wrap">
+            <input
+              type="password"
+              ng-minlength="6"
+              ng-maxlength="22"
+              class="form-control"
+              id="pwd2"
+              placeholder="请再输入一遍密码,密码由6-22位数字或字母组成"
+              ng-pattern="/^[A-Za-z0-9]+$/"
+              name="pwd2"
+              ng-model="userdata.pwd2"
+              required
+              ng-class="{
+                'error': signUpForm.pwd2.$invalid && signUpForm.pwd2.$touched,
+                'success': signUpForm.pwd2.$valid
+              }"
+              compare="userdata.pwd1"
+
+              >
+              <i class="fa fa-check tip right" ng-if="signUpForm.pwd2.$valid && signUpForm.pwd2.$touched"></i>
+              <i class="fa fa-remove tip wrong" ng-if="signUpForm.pwd2.$invalid && signUpForm.pwd2.$touched"></i>
+          </div>
+          <p
+            class="error-info"
+            ng-if="signUpForm.pwd2.$error.required && signUpForm.pwd2.$touched">
+            输入密码不能为空</p>
+          <p
+            class="error-info"
+            ng-if="(signUpForm.pwd2.$error.minlength || signUpForm.pwd2.$error.maxlength) && signUpForm.pwd2.$touched">
+            输入密码长度不合法,密码长度6-22位</p>
+          <p
+            class="error-info"
+            ng-if="signUpForm.pwd2.$error.pattern && signUpForm.pwd2.$touched">
+            密码含有非法字符，密码由数字或字母组成</p>
+          <p
+            class="error-info"
+            ng-if="signUpForm.pwd2.$error.compare && signUpForm.pwd2.$touched">
+            两次输入密码不一致</p>
+
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="tel">公司联系电话</label>
+          <div class="wrap">
+            <input
+              type="number"
+              class="form-control"
+              id="tel"
+              placeholder="请输入公司联系电话"
+              ng-model="userdata.tel"
+              name="tel"
+              ng-class="{
+                'error': signUpForm.tel.$invalid && signUpForm.tel.$touched,
+                'success':signUpForm.tel.$valid }"
+              required
+            >
+            <i class="fa fa-check tip right" ng-if="signUpForm.tel.$valid && signUpForm.tel.$touched"></i>
+            <i class="fa fa-remove tip wrong" ng-if="signUpForm.tel.$invalid && signUpForm.tel.$touched"></i>
+
+
+            <!-- 验证必填 $error.required -->
+            <P
+              class="error-info"
+              ng-if="signUpForm.tel.$touched && signUpForm.tel.$error.required"
+            >联系电话不能为空</P>
+
+
+
+
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="email">邮箱</label>
+          <div class="wrap">
+          <input
+            name="email"
+            ng-model="userdata.email"
+            ng-pattern ="/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/"
+            ng-class="{
+              'error': signUpForm.email.$invalid && signUpForm.email.$touched,
+              'success':signUpForm.email.$valid }"
+            required
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="请输入联系人邮箱"
+          >
+          <i class="fa fa-check tip right" ng-if="signUpForm.email.$valid && signUpForm.email.$touched"></i>
+          <i class="fa fa-remove tip wrong" ng-if="signUpForm.email.$invalid && signUpForm.email.$touched"></i>
+          </div>
+
+          <p
+            class="error-info"
+            ng-if="signUpForm.email.$touched && signUpForm.email.$error.required"
+            >邮箱不能为空</p>
+
+          <p
+            class="error-info"
+            ng-if="signUpForm.email.$touched && signUpForm.email.$error.pattern"
+            >邮箱格式不正确</p>
+        </div>
+
+        <div class="form-group">
+          <label for="company">公司名称</label>
+          <div class="wrap">
+            <input
+              type="text"
+              class="form-control"
+              id="company"
+              placeholder="请输入正确的公司名称"
+              name="company"
+              ng-model="userdata.company"
+              ng-class="{
+                'error': signUpForm.company.$invalid && signUpForm.company.$touched,
+                'success':signUpForm.company.$valid }"
+              required
+            >
+            <i class="fa fa-check tip right" ng-if="signUpForm.company.$valid && signUpForm.company.$touched"></i>
+            <i class="fa fa-remove tip wrong" ng-if="signUpForm.company.$invalid && signUpForm.company.$touched"></i>
+            <p
+              class="error-info"
+              ng-if="signUpForm.company.$touched && signUpForm.company.$error.required"
+              >公司名称不能为空</p>
+
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="website">公司网址</label>
+          <div class="wrap">
+            <input
+              name="website"
+              ng-model="userdata.website"
+              ng-class="{
+                'error': signUpForm.website.$invalid && signUpForm.website.$touched,
+                'success':signUpForm.website.$valid }"
+              type="url"
+              class="form-control"
+              id="website"
+              placeholder="请输入您的公司网址，以http://开头"
+              required
+            >
+
+
+            <i class="fa fa-check tip right" ng-if="signUpForm.website.$valid && signUpForm.website.$touched"></i>
+            <i class="fa fa-remove tip wrong" ng-if="signUpForm.website.$invalid && signUpForm.website.$touched"></i>
+            <p
+              class="error-info"
+              ng-if="signUpForm.website.$touched && signUpForm.website.$error.required"
+              >公司网站名称不能为空</p>
+
+              <p
+                class="error-info"
+                ng-if="signUpForm.website.$touched && signUpForm.website.$error.url"
+                >公司网站格式不正确</p>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="resource">公司资源属性</label>
+          <div class="wrap">
+            <input
+              name="resource"
+              ng-model="userdata.resource"
+              ng-class="{
+                'error': signUpForm.resource.$invalid && signUpForm.resource.$touched,
+                'success':signUpForm.resource.$valid }"
+              type="url"
+              class="form-control"
+              id="resource"
+              placeholder="请输入您的公司网址，以http://开头"
+              required
+            >
+
+
+            <i class="fa fa-check tip right" ng-if="signUpForm.resource.$valid && signUpForm.resource.$touched"></i>
+            <i class="fa fa-remove tip wrong" ng-if="signUpForm.resource.$invalid && signUpForm.resource.$touched"></i>
+            <p
+              class="error-info"
+              ng-if="signUpForm.resource.$touched && signUpForm.resource.$error.required"
+              >公司网站名称不能为空</p>
+
+              <p
+                class="error-info"
+                ng-if="signUpForm.resource.$touched && signUpForm.resource.$error.url"
+                >公司网站格式不正确</p>
+
+          </div>
+        </div>
+
+        <input
+          type="text"
+          ng-model="userdata.captcha1"
+          name="captcha1"
+
+        >
+
+        <pre>
+          {{signUpForm.captcha1}}
+        </pre>
+        <pre>
+          {{signUpForm.captcha}}
+        </pre>
+
+        <div class="form-group">
+          <label for="captcha">验证码</label>
+          <input
+            type="text"
+            class="form-control"
+            id="captcha"
+            placeholder="请输验证码"
+            required
+            ng-model="userdata.captcha"
+            name="captcha"
+            ng-class="{
+              'error': signUpForm.captcha.$invalid && signUpForm.captcha.$touched,
+              'success':signUpForm.captcha.$valid }"
+            compare="userdata.captcha1"
+          >
+
+
+
+
+          <img id="captcha-img" src="img/demo.jpg" alt="">
+          <span id="captcha-tip"><a href="#"> <i class="fa fa-refresh"></i> 看不清？换一张</a></span>
+        </div>
+
+
+        <button id="sub-btn" type="submit" ng-disabled="signUpForm.$invalid" class="btn btn-primary">完成注册</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/company-reg.js"></script>
+</body>
+</html>

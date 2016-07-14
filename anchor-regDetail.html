@@ -9,9 +9,18 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/anchor-regDetail.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blue.css">
+  <style>
+    .icheckbox_square-blue{
+      width: 20px;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
 
 </head>
 <body>
+
 
   <div id="header" class="main-wrap">
       <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
@@ -155,29 +164,48 @@
           <label for="platformId" class="col-sm-2 control-label">账号分类</label>
           <div class="col-sm-10">
             <div class="checkbox">
-              <label>
-                <input type="checkbox">体育
-                <input type="checkbox">游戏
-                <input type="checkbox">
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-                <input type="checkbox"> Check me out
-              </label>
+
+                <input type="checkbox" value="体育">  体&nbsp;育
+                <input type="checkbox" value="游戏">  游&nbsp;戏
+                <input type="checkbox" value="影视">  影&nbsp;视
+                <input type="checkbox" value="搞笑">  搞&nbsp;笑
+                <input type="checkbox" value="音乐">  音&nbsp;乐
+                <input type="checkbox" value="舞蹈">  舞&nbsp;蹈
+                <input type="checkbox" value="艺术">  艺&nbsp;术
+                <input type="checkbox" value="音乐">  汽&nbsp;车
+                <input type="checkbox" value="潮品">  潮&nbsp;品
+                <input type="checkbox" value="旅游">  旅&nbsp;游
+                <input type="checkbox" value="数码">  数&nbsp;码
+                <input type="checkbox" value="健康">  健&nbsp;康
+                <input type="checkbox" value="美食">  美&nbsp;食
+                <input type="checkbox" value="文学">  文&nbsp;学
+                <input type="checkbox" value="军事">  军&nbsp;事
+                <input type="checkbox" value="法律">  法&nbsp;律
+                <input type="checkbox" value="萌宠">  萌&nbsp;宠
+                <input type="checkbox" value="动漫">  动&nbsp;漫
+                <input type="checkbox" value="财务">  财&nbsp;务
+                <input type="checkbox" value="秀场">  秀&nbsp;场
+
             </div>
           </div>
         </div>
 
 
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-success">提交注册</button>
+          <label for="platformId" class="col-sm-2 control-label">主播性质</label>
+          <div class="col-sm-10">
+            <select name="gender" id="gender" class="form-control gender-select">
+              <option value="">请选择</option>
+              <option value="男">公会主播</option>
+              <option value="女">个人主播</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-success btn-lg btn-block">提交完成</button>
           </div>
         </div>
     </form>
@@ -192,7 +220,10 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/angular.js"></script>
   <script src="js/anchor-reg.js"></script>
-
+  <script src="js/icheck.js"></script>
+<script>
+  $('input').iCheck({ checkboxClass: 'icheckbox_square-blue', radioClass: 'iradio_square-blue', increaseArea: '20%'  });
+</script>
   <!--图片上传预览-->
 <script src="js/uploadPreview.min.js"></script>
 <script>

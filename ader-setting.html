@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>广告主账号信息管理</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ader-setting.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blue.css">
+
+</head>
+<body>
+
+
+  <div id="header" class="main-wrap">
+      <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
+      <div class="form-btn">
+        <span><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></span>
+        <span><a href="#">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></span>
+      </div>
+
+
+  </div>
+  <div class="container main-wrap">
+    <h2 class="title">广告主账号信息管理</h2>
+    <div class="row" ng-controller="FormController">
+
+      <form class="form-horizontal col-md-9 col-md-offset-1" name="signUpForm" ng-submit="submitForm()">
+        <div class="form-group">
+          <label for="tel" class="col-sm-2 control-label">联系方式</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="tel" placeholder="请输入联系人手机号">
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">邮箱</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" placeholder="请输入邮箱地址">
+          </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="captcha" class="col-sm-2 control-label">验证码</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="captcha" placeholder="请输验证码">
+              <img id="captcha-img" src="img/demo.jpg" alt="">
+              <span id="captcha-tip"><a href="#"> <i class="fa fa-refresh"></i> 看不清？换一张</a></span>
+           </div >
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-success btn-lg btn-block">完成提交</button>
+          </div>
+        </div>
+    </form>
+
+
+
+    </div>
+  </div>
+
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/icheck.js"></script>
+<script>
+  $('input').iCheck({ checkboxClass: 'icheckbox_square-blue', radioClass: 'iradio_square-blue', increaseArea: '20%'  });
+</script>
+</body>
+</html>

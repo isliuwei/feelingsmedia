@@ -9,11 +9,6 @@
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/company-setting.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <!-- <link rel="stylesheet" href="css/jquery.dynatable.css" />
-  <link rel="stylesheet" href="css/amazeui.min.css"/>
-  <link rel="stylesheet" href="css/amazeui.datatables.min.css" /> -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
 
 
 </head>
@@ -35,54 +30,7 @@
 
 
 
-      <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-            </tr>
-          </tbody>
-    </table>
+
 
 
     </div>
@@ -91,33 +39,10 @@
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script scr="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
-
-
-
-<!-- <script src="js/jquery.dynatable.js"></script> -->
-<!-- <script src="js/amazeui.datatables.min.js"></script> -->
 <script>
 
-  // $(function() {
-  //     $('#my-table').dynatable();
-  // });
-  //
-  jQuery.extend(jQuery.fn.dataTableExt.oSort, {
-  "chinese-string-asc": function(s1, s2) {
-    return s1.localeCompare(s2);
-  },
-
-  "chinese-string-desc": function(s1, s2) {
-    return s2.localeCompare(s1);
-  }
-});
 
 
-  $(function() {
-    $('#example').DataTable();
-  });
 
 </script>
 </body>

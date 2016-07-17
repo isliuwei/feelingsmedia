@@ -1,6 +1,6 @@
 /*****
-作者：gaoyingying 
-
+	author：gaoyingying 
+	time:2016/7/17 9:05;
 *****/
 *{
 	margin: 0;
@@ -21,7 +21,7 @@ body{
 	width: 1280px;
 	height: 580px;
 	margin:40px auto;
-	background: url(img/g-bg.jpg) no-repeat ;
+	background: url(../img/g-pic5.jpg) no-repeat ;
 	
 }
 

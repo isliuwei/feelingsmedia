@@ -15,7 +15,7 @@ ul,ol{
 	font-size: 13px; 	
 }
 .banner{
-	width: 900px;
+	width: 890px;
 	height: 100px;
 	margin-left: 50px;
 	position: relative;
@@ -55,7 +55,7 @@ ul,ol{
 }
 .btn .next{
 	position: absolute;
-	right: 10px;
+	right: 0px;
 	top: 50%;
 	margin-top: -50px;
 }

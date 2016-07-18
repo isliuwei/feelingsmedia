@@ -157,9 +157,7 @@
           <div>在线人数<span>5万</span></div>
         </div>
       </div>
-
     </div> 
-
   </div>
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script> 
@@ -175,7 +173,7 @@
     // 下一个按钮
     $('.next').click(function(){
       i++;
-      if (i==$('.img li').length) {
+      if (i==$('.img li').length-9){
         i=1; 
         $('.img').css({left:0}); 
       };
@@ -185,42 +183,45 @@
     // 上一个按钮
     $('.prev').click(function(){
       i--;
-      if (i==-1) {
-        i=$('.img li').length-2;
-        $('.img').css({left:-($('.img li').length-1)*180});
+      if (i==-1){
+        i=$('.img li').length-11;
+        $('.img').css({left:-i*180});
       }
       $('.img').stop().animate({left:-i*180},300);
-    })
+    });
+    
     //设置按钮的显示和隐藏
     $('.banner').hover(function(){
       $('.btn').show();
-    },function(){
+    },function(){ 
       $('.btn').hide();
-    })
+    });
+
     //定时器自动播放
     timer=setInterval(function(){
       i++;
-      if (i==$('.img li').length-9) {
+      if (i==$('.img li').length-9){
         i=1;
         $('.img').css({left:0});
       };
       $('.img').stop().animate({left:-i*180},300);
-
     },2000)
+
     //鼠标移入，暂停自动播放，移出，开始自动播放
     $('.banner').hover(function(){ 
       clearInterval(timer);
     },function(){
       timer=setInterval(function(){
       i++;
-      if (i==$('.img li').length) {
+      if (i==$('.img li').length){
         i=1;
         $('.img').css({left:0});
       };
       $('.img').stop().animate({left:-i*180},300);
       },1000)
-    }) 
-  })
+    }); 
+
+  });
   </script>
   </body>
 </html>

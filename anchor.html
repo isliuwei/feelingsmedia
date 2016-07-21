@@ -166,7 +166,7 @@
     var i=0;
     var timer=null;
     var firstimg=$('.img li').clone(); 
-    $('.img').append(firstimg).width($('.img li').length*($('.img img').width()+10)); //设置ul宽度
+    $('.img').append(firstimg).width($('.img li').length*($('.img img').width()+10));
    // console.log($('.img li').length);
    // console.log($('.img').width());//3600
   
@@ -175,7 +175,7 @@
       i++;
       if (i==$('.img li').length-9){
         i=1; 
-        $('.img').css({left:0}); 
+        $('.img').css({left:0});
       };
       $('.img').stop().animate({left:-i*180},300);
     });
@@ -213,12 +213,12 @@
     },function(){
       timer=setInterval(function(){
       i++;
-      if (i==$('.img li').length){
+      if (i==$('.img li').length-9){
         i=1;
         $('.img').css({left:0});
       };
       $('.img').stop().animate({left:-i*180},300);
-      },1000)
+      },2000)
     }); 
 
   });

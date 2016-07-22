@@ -1,0 +1,30 @@
+/**
+ *
+ *  @author liuwei
+ *  @2016/07/09  14:09
+ *  @广告主注册页面css样式
+ *
+ *
+ */
+
+.main-wrap{
+  margin: 0px auto;
+  width: 1000px;
+}
+#header{
+  height: 80px;
+  line-height: 80px;
+}
+#header .title{
+  font-size: 16px;
+  display: inline-block;
+
+}
+#header .form-btn{
+  float: right;
+  font-size: 16px;
+  font-weight: 900;
+}
+#header .form-btn span:nth-child(1){
+  margin-right: 40px;
+}

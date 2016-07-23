@@ -1588,7 +1588,7 @@ hr.dots:before {
 }
 .login,
 #register {
-  background-color: #eee;
+  background: rgba(255, 255, 255, 0);
 }
 .login header,
 #register header {

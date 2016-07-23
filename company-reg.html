@@ -4,35 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>媒体咨询公司注册</title>
+  <title>媒体咨询公司注册页面</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/company-reg.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/blue.css">
+  <link rel="stylesheet" href="css/lrtk.css" />
+  <link rel="stylesheet" href="css/lrtk1.css" />
 
   <style>
     .icheckbox_square-blue{
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       margin-bottom: 10px;
     }
   </style>
 
 </head>
 <body>
-  <div id="header" class="main-wrap">
-      <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
-      <div class="form-btn">
-        <span><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></span>
-        <span><a href="#">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></span>
-      </div>
+  <header class='navbar navbar-default navbar-fixed-top' id='main-navbar' role='banner'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      </button>
+			  <!-- <img class="logo" alt="" src="img/favicon.ico"> -->
+			</div>
+			<nav class='collapse navbar-collapse' role='navigation'>
+			  <ul class='nav navbar-nav navbar-left'>
+			    <li><a href="index.html" target="_blank">首页</a></li>
+			    <li class="active"><a href="#">我是媒体咨询公司 | 注册</a></li>
+			  </ul>
 
+        <ul class='nav navbar-nav navbar-right'>
 
-  </div>
+        <a class="btn btn-success navbar-btn login-btn" data-toggle="modal" data-target="#company-reg" href="#">登录</a>
 
-  <div class="container main-wrap">
-    <h2 class="title">公司注册</h2>
+        <a class="btn navbar-btn js-login-btn" href="#">Register</a>
+
+        </ul>
+			</nav>
+		</div>
+	</header>
+
+  <div class="container">
+    <h2 class="title">媒体咨询公司注册</h2>
     <div class="row" ng-controller="FormController">
 
       <form class="form col-md-8 col-md-offset-2" name="signUpForm" ng-submit="submitForm()">
@@ -286,37 +305,7 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="resource">公司资源属性</label>
-          <div class="wrap">
-            <input
-              name="resource"
-              ng-model="userdata.resource"
-              ng-class="{
-                'error': signUpForm.resource.$invalid && signUpForm.resource.$touched,
-                'success':signUpForm.resource.$valid }"
-              type="url"
-              class="form-control"
-              id="resource"
-              placeholder="请输入您的公司网址，以http://开头"
-              required
-            >
 
-
-            <i class="fa fa-check tip right" ng-if="signUpForm.resource.$valid && signUpForm.resource.$touched"></i>
-            <i class="fa fa-remove tip wrong" ng-if="signUpForm.resource.$invalid && signUpForm.resource.$touched"></i>
-            <p
-              class="error-info"
-              ng-if="signUpForm.resource.$touched && signUpForm.resource.$error.required"
-              >公司网站名称不能为空</p>
-
-              <p
-                class="error-info"
-                ng-if="signUpForm.resource.$touched && signUpForm.resource.$error.url"
-                >公司网站格式不正确</p>
-
-          </div>
-        </div>
 
         <div class="form-group">
           <label for="resourceCate" class="col-sm-3 control-label">公司资源类型</label>
@@ -326,19 +315,20 @@
                 <input type="checkbox" value="楼宇">  楼&nbsp;宇
                 <input type="checkbox" value="公交">  公&nbsp;交
                 <input type="checkbox" value="机场">  机&nbsp;场
-                <input type="checkbox" value="户外楼梯LED大屏">  户外楼梯LED大屏
                 <input type="checkbox" value="校园">  校&nbsp;园
                 <input type="checkbox" value="地铁">  地&nbsp;铁
                 <input type="checkbox" value="院线">  院&nbsp;线
                 <input type="checkbox" value="擎天柱">  擎&nbsp;天&nbsp;柱
+                <br>
                 <input type="checkbox" value="自媒体">  自&nbsp;媒&nbsp;体
+                <input type="checkbox" value="户外楼梯LED大屏">  户外楼梯LED大屏
             </div>
           </div>
         </div>
 
 
         <div class="form-group">
-          <label for="resourceCity" class="col-sm-3 control-label">公司资源分布城市（多选）</label>
+          <label for="resourceCity" class="col-sm-3 control-label">公司资源分布城市</label>
           <br>
           <div class="col-sm-9">
             <div class="checkbox">
@@ -348,30 +338,29 @@
                 <input type="checkbox" value="深圳">  深&nbsp;圳
                 <input type="checkbox" value="天津">  天&nbsp;津
                 <input type="checkbox" value="重庆">  重&nbsp;庆
-                <input type="checkbox" value="石家庄">  石&nbsp;家&nbsp;庄
                 <input type="checkbox" value="太原">  太&nbsp;原
                 <input type="checkbox" value="沈阳">  沈&nbsp;阳
                 <input type="checkbox" value="长春">  长&nbsp;春
                 <input type="checkbox" value="南京">  南&nbsp;京
                 <input type="checkbox" value="杭州">  杭&nbsp;州
                 <input type="checkbox" value="合肥">  合&nbsp;肥
-                <input type="checkbox" value="哈尔滨">  哈&nbsp;尔&nbsp;滨
                 <input type="checkbox" value="福州">  福&nbsp;州
                 <input type="checkbox" value="南昌">  南&nbsp;昌
                 <input type="checkbox" value="济南">  济&nbsp;南
                 <input type="checkbox" value="郑州">  郑&nbsp;州
                 <input type="checkbox" value="武汉">  武&nbsp;汉
                 <input type="checkbox" value="长沙">  长&nbsp;沙
-                <input type="checkbox" value="呼和浩特"> 呼和浩特
                 <input type="checkbox" value="成都">  成&nbsp;都
                 <input type="checkbox" value="贵阳">  贵&nbsp;阳
                 <input type="checkbox" value="昆明">  昆&nbsp;明
                 <input type="checkbox" value="西安">  西&nbsp;安
                 <input type="checkbox" value="南宁">  南&nbsp;宁
                 <input type="checkbox" value="大连">  大&nbsp;连
-                <input type="checkbox" value="乌鲁木齐"> 乌鲁木齐
-
                 <input type="checkbox" value="青岛">  青&nbsp;岛
+                <input type="checkbox" value="石家庄">  石&nbsp;家&nbsp;庄
+                <input type="checkbox" value="哈尔滨">  哈&nbsp;尔&nbsp;滨
+                <input type="checkbox" value="乌鲁木齐"> 乌&nbsp;鲁&nbsp;木&nbsp;齐
+                <input type="checkbox" value="呼和浩特"> 呼&nbsp;和&nbsp;浩&nbsp;特
                 <input type="checkbox" value="其它">  其&nbsp;它
 
             </div>
@@ -394,7 +383,7 @@
             ng-class="{
               'error': signUpForm.captcha.$invalid && signUpForm.captcha.$touched,
               'success':signUpForm.captcha.$valid }"
-            compare="userdata.captcha1"
+
           >
 
 
@@ -405,9 +394,63 @@
         </div>
 
 
-        <button id="sub-btn" type="submit" ng-disabled="signUpForm.$invalid" class="btn btn-primary">完成注册</button>
+        <button id="sub-btn" type="submit" ng-disabled="signUpForm.$invalid" class="btn btn-lg btn-success">完成注册</button>
       </form>
     </div>
+  </div>
+  <div class="modal fade" id="company-reg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="login">
+                <form action="#" method="post" class="container offset1 loginform">
+                    <div class="owl-login">
+                        <div class="hand"></div>
+                        <div class="hand hand-r"></div>
+                        <div class="arms">
+                            <div class="arm"></div>
+                            <div class="arm arm-r"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>媒体资源公司登录</h3>
+                    <div class="pad">
+                        <input type="hidden" name="" value="">
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="username" class="control-label fa fa-user"></label>
+                                <input id="username" type="text" name="username" placeholder="用户名" tabindex="1" autofocus="autofocus" class="form-control input-medium">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="password" class="control-label fa fa-key"></label>
+                                <input id="password" type="password" name="password" placeholder="密码" tabindex="2" class="form-control input-medium">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="controls">
+                              <label for="captcha" class="control-label fa fa-key"></label>
+                                <input id="captcha1" type="number" name="captcha" placeholder="验证码" tabindex="2" class="form-control col-md-2">
+                                <img id="captcha-img" src="img/demo.jpg" alt="">
+                                <span id="captcha-tip"><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-refresh"></i>换一张</a></span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-actions">
+                        <p><a href="#" tabindex="5" class=" pull-left btn-link text-muted">忘记密码?</a></p>
+                        <br>
+                        <button type="submit" tabindex="4" class="btn btn-primary modal-btn">登录</button>
+                        <button type="button" tabindex="4" class="btn btn-warning modal-btn"><a href="company-reg.html" style="display:block;color:#fff;">注册</a></button>
+                    </div>
+
+                </form>
+          </div>
+      </div>
   </div>
 
 
@@ -418,6 +461,20 @@
   <script src="js/icheck.js"></script>
   <script>
     $('input').iCheck({ checkboxClass: 'icheckbox_square-blue', radioClass: 'iradio_square-blue', increaseArea: '20%'  });
+  </script>
+
+
+  <script>
+    $(function() {
+
+        $('.login #password').focus(function() {
+            $('.owl-login').addClass('password');
+        }).blur(function() {
+            $('.owl-login').removeClass('password');
+        });
+
+
+    });
   </script>
 </body>
 </html>

@@ -1,17 +1,5 @@
 /* Custom Stylesheet */
-body, html {
-      margin: 0;
-      -webkit-font-smoothing: antialiased;
-      background:#fff;
-      text-align: center;
-      -webkit-transition: opacity 400ms;
-      -moz-transition: opacity 400ms;
-      transition: opacity 400ms;
-}
 
-body .header{
-  color: #000;
-}
 html {
 min-height: 100%;
     }

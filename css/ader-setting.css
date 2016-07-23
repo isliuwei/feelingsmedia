@@ -7,43 +7,21 @@
  *
  */
 
-.main-wrap{
-  margin: 0px auto;
-  width: 1000px;
-}
-#header{
-  height: 80px;
-  line-height: 80px;
-}
-#header .title{
-  font-size: 16px;
-  display: inline-block;
-
-}
-#header .form-btn{
-  float: right;
-  font-size: 16px;
-  font-weight: 900;
-}
-#header .form-btn span:nth-child(1){
-  margin-right: 40px;
-}
 
 
-.container{
-  width: 1000px;
 
-  border: 1px solid #aaa;
-  padding-bottom: 40px;
-}
-.container .title{
-  font-size: 20px;
-  margin-top: 26px;
-  margin-left: 40px;
-  margin-bottom: 40px;
-
-
-}
+ .container{
+   margin-top: 100px;
+   border: 1px solid #aaa;
+   padding-bottom: 40px;
+   margin-bottom: 100px;
+ }
+ .container .title{
+   font-size: 20px;
+   margin-top: 26px;
+   margin-left: 40px;
+   margin-bottom: 40px;
+ }
 .form{
   margin-top: 40px;
 }
@@ -140,3 +118,56 @@
    height: 20px;
    margin-bottom: 10px;
  }
+
+
+ .js-login-btn{
+   visibility: hidden;
+ }
+
+
+ .labe-tel{
+   /*display: inline-block;
+   width: 200px;
+   height: 40px;
+   margin-left: 150px;
+   line-height: 40px;*/
+   font-size: 18px;
+   color: #337ab7;
+ }
+ @media (min-width: 990px){
+   .labe-tel{
+     display: inline-block;
+     width: 200px;
+     height: 40px;
+     margin-left: 200px;
+     line-height: 40px;
+   }
+ }
+
+ @media (min-width: 840px){
+   .labe-tel{
+     display: inline-block;
+     width: 200px;
+     height: 40px;
+     /*margin-left: 50px;*/
+     line-height: 40px;
+   }
+ }
+
+ @media (max-width: 840px){
+   .labe-tel{
+     display: none;
+
+   }
+ }
+
+ @media (max-width: 750px){
+   .labe-tel{
+     display: inline-block;
+     width: 100px;
+     height: 20px;
+
+     line-height: 20px;
+   }
+ }
+ 

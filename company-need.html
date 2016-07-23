@@ -56,6 +56,7 @@
 
 
       }
+      
 
 
 
@@ -68,13 +69,37 @@
 <body>
 
 
-  <div id="header" class="main-wrap">
-      <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
-      <div class="form-btn">
-        <span><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></span>
-        <span><a href="#">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></span>
-      </div>
-  </div>
+  <header class='navbar navbar-default navbar-fixed-top' id='main-navbar' role='banner'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      </button>
+        <!-- <a href="index5.html" target="_blank">广告主公司名称</a> -->
+			  <!-- <img class="logo" alt="" src="img/favicon.ico"> -->
+			</div>
+			<nav class='collapse navbar-collapse' role='navigation'>
+			  <ul class='nav navbar-nav navbar-left'>
+			    <li><a href="index5.html" target="_blank">广告主公司名称</a></li>
+			    <li class="active"><a href="#">媒体咨询公司需求填写</a></li>
+			  </ul>
+
+        <div class="label labe-tel"><i class="fa fa-phone"></i> <a class="a-tel" href="tel:4006668800">合作咨询：400-666-8800</a></div>
+
+        <ul class='nav navbar-nav navbar-right'>
+        <a class="btn btn-success navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="anchor-need-profile.html">账号信息</a>
+        <a class="btn btn-primary navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="ader-setting.html">账号管理</a>
+        <a class="btn btn-default navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="#">退出登录</a>
+
+        <a class="btn navbar-btn js-login-btn" href="#">Register</a>
+
+        </ul>
+			</nav>
+		</div>
+	</header>
+
   <div class="container main-wrap">
     <h2 class="title">媒体资源需求发布</h2>
     <div class="row" ng-controller="FormController">
@@ -123,6 +148,7 @@
                 <input type="checkbox" value="餐饮">&nbsp;餐&nbsp;饮
                 <input type="checkbox" value="App">&nbsp;A&nbsp;p&nbsp;p
                 <input type="checkbox" value="互联网">互联网
+                <br>
                 <input type="checkbox" value="文化艺术">&nbsp;文&nbsp;化&nbsp;艺&nbsp;术
             </div>
           </div>
@@ -186,6 +212,7 @@
                 <input type="checkbox" value="院线">&nbsp;院&nbsp;线
                 <input type="checkbox" value="擎天柱">擎天柱
                 <input type="checkbox" value="自媒体">自媒体
+                <br>
                 <input type="checkbox" value="户外楼体LED大屏">户外楼体LED大屏
 
             </div>
@@ -224,8 +251,8 @@
                 <input type="checkbox" value="大连">  大&nbsp;连
                 <input type="checkbox" value="青岛">  青&nbsp;岛
                 <input type="checkbox" value="哈尔滨">  哈&nbsp;尔&nbsp;滨&nbsp;
-                <input type="checkbox" value="石家庄">  石&nbsp;家&nbsp;庄&nbsp;
                 <br>
+                <input type="checkbox" value="石家庄">  石&nbsp;家&nbsp;庄&nbsp;
                 <input type="checkbox" value="乌鲁木齐">  乌&nbsp;鲁&nbsp;木&nbsp;齐&nbsp;
                 <input type="checkbox" value="呼和浩特">  呼&nbsp;和&nbsp;浩&nbsp;特&nbsp;
                 <input type="checkbox" value="其它">  其&nbsp;它

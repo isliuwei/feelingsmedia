@@ -65,13 +65,35 @@
 </head>
 <body>
 
-  <div id="header" class="main-wrap">
-      <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
-      <div class="form-btn">
-        <span><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></span>
-        <span><a href="#">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></span>
-      </div>
-  </div>
+  <header class='navbar navbar-default navbar-fixed-top' id='main-navbar' role='banner'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      </button>
+        <!-- <a href="index5.html" target="_blank">广告主公司名称</a> -->
+			  <!-- <img class="logo" alt="" src="img/favicon.ico"> -->
+			</div>
+			<nav class='collapse navbar-collapse' role='navigation'>
+			  <ul class='nav navbar-nav navbar-left'>
+			    <li><a href="index5.html" target="_blank">主播名称</a></li>
+			    <li class="active"><a href="#">账号管理</a></li>
+			  </ul>
+
+
+
+        <ul class='nav navbar-nav navbar-right'>
+        <a class="btn btn-primary navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="ader-setting.html">账号管理</a>
+        <a class="btn btn-default navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="#">退出登录</a>
+
+        <a class="btn navbar-btn js-login-btn" href="#">Register</a>
+
+        </ul>
+			</nav>
+		</div>
+	</header>
 
 
   <div class="container">

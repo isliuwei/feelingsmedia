@@ -7,41 +7,19 @@
  *
  */
 
-.main-wrap{
-  margin: 0 auto;
-  width: 1000px;
-}
-#header{
-  height: 80px;
-  line-height: 80px;
-}
-#header .title{
-  font-size: 16px;
-  display: inline-block;
-}
-#header .form-btn{
-  float: right;
-  font-size: 16px;
-  font-weight: 900;
-}
-#header .form-btn span:nth-child(1){
-  margin-right: 40px;
-}
+ .container{
+   margin-top: 100px;
+   border: 1px solid #aaa;
+   padding-bottom: 40px;
+   margin-bottom: 100px;
+ }
+ .container .title{
+   font-size: 20px;
+   margin-top: 26px;
+   margin-left: 40px;
 
 
-.container{
-  width: 1000px;
-
-  border: 1px solid #aaa;
-  padding-bottom: 40px;
-}
-.container .title{
-  font-size: 20px;
-  margin-top: 26px;
-  margin-left: 40px;
-
-
-}
+ }
 .form{
   margin-top: 40px;
 }
@@ -116,4 +94,52 @@
  input::-webkit-inner-spin-button{
    -webkit-appearance: none !important;
    margin: 0;
+ }
+
+
+ .js-login-btn{
+   visibility: hidden;
+ }
+
+
+
+ .login-bg{
+   background: rgba(255, 255, 255, 0);
+ }
+
+ #captcha1{
+   width: 120px;
+ }
+ /*去掉html5 input number默认样式*/
+ input[type="number"]{
+   -moz-appearance: textfield;
+ }
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button{
+   -webkit-appearance: none !important;
+   margin: 0;
+ }
+
+ .form-actions{
+   padding:5px 20px;
+ }
+ .close-btn{
+   float: right;
+   font-size: 50px;
+   font-weight: 900;
+   line-height: 1;
+   color: #fff;
+   text-shadow: 0 1px 0 #fff;
+   filter: alpha(opacity=50);
+   opacity: .5;
+   transition: all 0.1 liner;
+ }
+ .close-btn:hover{
+   transform: rotate(360deg);
+   opacity: 1;
+   color: #fff;
+ }
+ .a-btn{
+   text-decoration: none;
+   color: #fff;
  }

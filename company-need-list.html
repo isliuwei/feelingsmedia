@@ -7,77 +7,17 @@
   <title>媒体咨询公司需求列表</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/anchor-profile.css" />
+  <link rel="stylesheet" href="css/company-need-list.css" />
   <link rel="stylesheet" href="css/material-cards.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/blue.css" />
 
   <style>
 
-      .select-group{
-        padding-left: 22px;
-        margin-top: 8px;
-      }
 
-      .type-select{
-        width: 150px;
-      }
-
-      input[type=text]:focus,input[type=password]:focus{
-        transition:border linear .2s,box-shadow linear .5s;
-        -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
-        -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
-        outline:none;border-color:rgba(93,149,242,.75);
-        box-shadow:0 0 8px rgba(93,149,242,.105);
-        -moz-box-shadow:0 0 8px rgba(93,149,242,.5);
-        -webkit-box-shadow:0 0 8px rgba(93,149,242,3);
-        background-color: #fff;
-
-      }
-
-      input[type=text],input[type=password],input[type=number],input[type=email]{
-        /*background: rgb(250, 255, 189);
-        background-color: #d9edf7;
-        background-color: #f2dede;
-        background-color: #dff0d8;
-        background-color: #337ab7;*/
-        background-color: #fcf8e3;
-      }
-      .control-label{
-        color: #fff;
-      }
-      .img-responsive{
-        width: 100%;
-        cursor: pointer;
-      }
-
-      .need-container{
-        margin-top: 50px;
-
-      }
-      .tel{
-        font-size: 18px;
-        font-weight: 900;
-      }
-      textarea{
-        resize: none;
-      }
-      .fa-asterisk{
-        font-weight: 0;
-        color: red;
-        font-size: 5px;
-      }
-      .modal-body{
-        margin-left: 20px;
-      }
-      .need-container{
-        margin-top: 50px;
-
-      }
-
-      span.input-group-addon{
-        width: 170px;
-        text-align: left;
+      .a-tel{
+        color: #337ab7;
+        text-decoration: none;
       }
 
 
@@ -86,16 +26,47 @@
 </head>
 <body>
 
-  <div id="header" class="main-wrap">
+  <!-- <div id="header" class="main-wrap">
       <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
       <div class="form-btn">
         <span><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></span>
         <span><a href="#">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></span>
       </div>
-  </div>
+  </div> -->
+
+  <header class='navbar navbar-default navbar-fixed-top' id='main-navbar' role='banner'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      </button>
+        <!-- <a href="index5.html" target="_blank">广告主公司名称</a> -->
+			  <!-- <img class="logo" alt="" src="img/favicon.ico"> -->
+			</div>
+			<nav class='collapse navbar-collapse' role='navigation'>
+			  <ul class='nav navbar-nav navbar-left'>
+			    <li><a href="index5.html" target="_blank">媒体咨询公司名称</a></li>
+			    <li class="active"><a href="#">媒体咨询公司需求列表</a></li>
+			  </ul>
+
+        <div class="label labe-tel"><i class="fa fa-phone"></i> <a class="a-tel" href="tel:4006668800">合作咨询：400-666-8800</a></div>
+
+        <ul class='nav navbar-nav navbar-right'>
+        <a class="btn btn-success navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="anchor-need-profile.html">账号信息</a>
+        <a class="btn btn-primary navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="ader-setting.html">账号管理</a>
+        <a class="btn btn-default navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="#">退出登录</a>
+
+        <a class="btn navbar-btn js-login-btn" href="#">Register</a>
+
+        </ul>
+			</nav>
+		</div>
+	</header>
 
 
-  <div class="container">
+  <div class="container cate-container">
     	<div class="row">
         <div class="form-group">
             <label for="region" class="col-sm-2 control-label label-warning">广告主行业分类</label>

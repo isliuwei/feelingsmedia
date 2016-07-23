@@ -4,22 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>主播注册</title>
+  <title>主播注册页面</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/anchor-reg.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lrtk.css" />
+  <link rel="stylesheet" href="css/lrtk1.css" />
 </head>
 <body>
-  <div id="header" class="main-wrap">
-      <h2 class="title">首&nbsp;&nbsp;&nbsp;&nbsp;页</h2>
-      <div class="form-btn">
-        <span><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></span>
-        <span><a href="#">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></span>
-      </div>
 
+  <header class='navbar navbar-default navbar-fixed-top' id='main-navbar' role='banner'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      </button>
+			  <!-- <img class="logo" alt="" src="img/favicon.ico"> -->
+			</div>
+			<nav class='collapse navbar-collapse' role='navigation'>
+			  <ul class='nav navbar-nav navbar-left'>
+			    <li><a href="index.html" target="_blank">首页</a></li>
+			    <li class="active"><a href="#">我是主播 | 注册</a></li>
+			  </ul>
 
-  </div>
+        <ul class='nav navbar-nav navbar-right'>
+
+        <a class="btn btn-success navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="#">登录</a>
+
+        <a class="btn navbar-btn js-login-btn" href="#">Register</a>
+
+        </ul>
+			</nav>
+		</div>
+	</header>
+
   <div class="container main-wrap">
     <h2 class="title">主播注册</h2>
     <div class="row" ng-controller="FormController">
@@ -338,7 +359,7 @@
 
         </div>
 
-        
+
 
 
 
@@ -349,6 +370,7 @@
         <div class="form-group">
           <label for="captcha">验证码</label>
           <input
+            value="6799"
             type="text"
             class="form-control"
             id="captcha"
@@ -359,7 +381,7 @@
             ng-class="{
               'error': signUpForm.captcha.$invalid && signUpForm.captcha.$touched,
               'success':signUpForm.captcha.$valid }"
-            compare="userdata.captcha1"
+
           >
 
 
@@ -370,15 +392,88 @@
         </div>
 
 
-        <button id="sub-btn" type="submit" ng-disabled="signUpForm.$invalid" class="btn btn-primary">提交并完善主播个人信息</button>
+        <button id="sub-btn" type="submit" ng-disabled="signUpForm.$invalid" class="btn  btn-success">提交并完善主播个人信息</button>
       </form>
     </div>
   </div>
+
+
+
+  <div class="modal fade" id="anchor-reg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="login">
+                <form action="#" method="post" class="container offset1 loginform">
+                    <div class="owl-login">
+                        <div class="hand"></div>
+                        <div class="hand hand-r"></div>
+                        <div class="arms">
+                            <div class="arm"></div>
+                            <div class="arm arm-r"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>主播登录</h3>
+                    <div class="pad">
+                        <input type="hidden" name="" value="">
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="username" class="control-label fa fa-user"></label>
+                                <input id="username" type="text" name="username" placeholder="用户名" tabindex="1" autofocus="autofocus" class="form-control input-medium">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="password" class="control-label fa fa-key"></label>
+                                <input id="password" type="password" name="password" placeholder="密码" tabindex="2" class="form-control input-medium">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="controls">
+                              <label for="captcha" class="control-label fa fa-key"></label>
+                                <input id="captcha1" type="number" name="captcha" placeholder="验证码" tabindex="2" class="form-control col-md-2">
+                                <img id="captcha-img" src="img/demo.jpg" alt="">
+                                <span id="captcha-tip"><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-refresh"></i>换一张</a></span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-actions">
+                        <p><a href="#" tabindex="5" class=" pull-left btn-link text-muted">忘记密码?</a></p>
+                        <br>
+                        <button type="submit" tabindex="4" class="btn btn-primary">登录</button>
+                        <button type="button" tabindex="4" class="btn btn-warning"><a href="anchor-reg.html" style="display:block;color:#fff;">注册</a></button>
+                    </div>
+
+                </form>
+          </div>
+      </div>
+  </div>
+
 
 
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/angular.js"></script>
   <script src="js/anchor-reg.js"></script>
+
+
+
+  <script>
+    $(function() {
+
+        $('.login #password').focus(function() {
+            $('.owl-login').addClass('password');
+        }).blur(function() {
+            $('.owl-login').removeClass('password');
+        });
+
+
+    });
+  </script>
 </body>
 </html>

@@ -1,28 +1,14 @@
 /*****
-	author：gaoyingying 
+	author：gaoyingying
 	time:2016/7/17 9:05;
 *****/
-*{
-	margin: 0;
-}
-ul,ol{
-	list-style:none; 
-}
-a{
-	text-decoration: none;
-}
-img{
-	border: 0;
-}
-body{
-	font-family:"FZLTZHK GBK1 0","宋体";
-}
+
 #gcontainer{
 	width: 1280px;
 	height: 580px;
 	margin:40px auto;
 	background: url(../img/g-pic5.jpg) no-repeat ;
-	
+
 }
 
 #gcontainer .first{
@@ -58,14 +44,14 @@ body{
 }
 #gcontainer .left,#gcontainer .right{
 	width: 373px;
-	height: 298px;	
+	height: 298px;
 }
 #gcontainer .left{
 	float: left;
 }
 #gcontainer .right{
 	margin-right: 158px;
-	float: right;	
+	float: right;
 }
 #gcontainer .list{
 	width: 371px;
@@ -83,4 +69,59 @@ body{
 }
 #gcontainer .need{
 	color: #4685d4;
+}
+
+
+.js-login-btn{
+  visibility: hidden;
+}
+
+
+.labe-tel{
+  /*display: inline-block;
+  width: 200px;
+  height: 40px;
+  margin-left: 150px;
+  line-height: 40px;*/
+  font-size: 18px;
+  color: #337ab7;
+}
+@media (min-width: 990px){
+  .labe-tel{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    margin-left: 200px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 840px){
+  .labe-tel{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    /*margin-left: 50px;*/
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 840px){
+  .labe-tel{
+    display: none;
+
+  }
+}
+
+@media (max-width: 750px){
+  .labe-tel{
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+
+    line-height: 20px;
+  }
+}
+.a-tel{
+  text-decoration: none;
 }

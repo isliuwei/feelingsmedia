@@ -7,7 +7,7 @@
   <title>主播需求信息列表</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/anchor-profile.css" />
+  <link rel="stylesheet" href="css/anchor-need-list.css" />
   <link rel="stylesheet" href="css/material-cards.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/blue.css" />
@@ -77,6 +77,68 @@
         font-size: 18px;
         font-weight: 900;
       }
+      .js-login-btn{
+      	visibility: hidden;
+      }
+      .labe-tel{
+        font-size: 18px;
+        color: #337ab7;
+      }
+      @media (min-width: 990px){
+        .labe-tel{
+          display: inline-block;
+          width: 200px;
+          height: 40px;
+          margin-left: 200px;
+          line-height: 40px;
+        }
+      }
+
+      @media (min-width: 840px){
+        .labe-tel{
+          display: inline-block;
+          width: 200px;
+          height: 40px;
+          /*margin-left: 50px;*/
+          line-height: 40px;
+        }
+      }
+
+      @media (max-width: 840px){
+        .labe-tel{
+          display: none;
+
+        }
+      }
+
+      @media (max-width: 750px){
+        .labe-tel{
+          display: inline-block;
+          width: 100px;
+          height: 20px;
+
+          line-height: 20px;
+        }
+      }
+      .a-tel{
+        text-decoration: none;
+        color: #337ab7;
+      }
+
+      .tag{
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 70px;
+      }
+
+      .tag-city{
+        margin-bottom: 60px;
+      }
+      .type-select{
+        width: 150px;
+        margin-bottom: 10px;
+      }
+
 
 
 
@@ -93,59 +155,40 @@
       </div>
   </div> -->
   <header class='navbar navbar-default navbar-fixed-top' id='main-navbar' role='banner'>
-		<div class='container-fluid'>
-			<div class='navbar-header'>
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-	      </button>
-			  <img class="logo" alt="" src="img/favicon.ico">
-			</div>
-			<nav class='collapse navbar-collapse' role='navigation'>
-			  <ul class='nav navbar-nav navbar-left'>
-			    <li class="active"><a href="#">首页</a></li>
-			    <li><a href="#">博文列表</a></li>
-			    <li><a href="#">个人主页</a></li>
-			    <li><a href="#">联系我</a></li>
-			    <li><a href="#">关于我</a></li>
-			  </ul>
-			  <div class='navbar-right'>
+        </button>
+        <!-- <a href="index5.html" target="_blank">广告主公司名称</a> -->
+        <!-- <img class="logo" alt="" src="img/favicon.ico"> -->
+      </div>
+      <nav class='collapse navbar-collapse' role='navigation'>
+        <ul class='nav navbar-nav navbar-left'>
+          <li><a href="index5.html" target="_blank">主播名称</a></li>
+          <!-- <li class="active"><a href="#">主播资源合作</a></li> -->
+        </ul>
 
+        <div class="label labe-tel"><i class="fa fa-phone"></i> <a class="a-tel" href="tel:4006668800">合作咨询：400-666-8800</a></div>
 
+        <ul class='nav navbar-nav navbar-right'>
+          <a class="btn btn-success navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="anchor-need-profile.html">账号信息</a>
+          <a class="btn btn-primary navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="ader-setting.html">账号管理</a>
+          <a class="btn btn-default navbar-btn login-btn" data-toggle="modal" data-target="#anchor-reg" href="#">退出登录</a>
+          <a class="btn navbar-btn js-login-btn" href="#">Register</a>
 
-
-
-				<!-- Split button -->
-				<div class="btn-group user-btn">
-					<button type="button" class="btn btn-default ">
-            当前登录用户
-					</button>
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    <span class="caret"></span>
-					    <span class="sr-only">Toggle Dropdown</span>
-					</button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Login</a></li>
-						<li><a href="#">Setting</a></li>
-						<li><a href="#">Profile</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Logout</a></li>
-					</ul>
-				</div>
-			    <a class="btn btn-primary navbar-btn login-btn" href="#">Login</a>
-
-			    <a class="btn navbar-btn js-login-btn" href="#">Register</a>
-			  </div>
-			</nav>
-		</div>
-	</header>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 
   <div class="container">
     	<div class="row">
         <div class="form-group">
-            <label for="region" class="col-sm-2 control-label label-warning">广告主行业分类</label>
+            <label for="region" class="col-sm-2 control-label label-success tag">广告主行业分类</label>
               <select name="country" id="country" class="form-control type-select">
                 <option value="">行业分类</option>
                 <option value="快消">快消</option>
@@ -167,24 +210,24 @@
                 <option value="教育">教育</option>
                 <option value="餐饮">餐饮</option>
               </select>
-              <!-- <a href="#">快消</a>
-              <a href="#">日化</a>
-              <a href="#">电商</a>
-              <a href="#">影视</a>
-              <a href="#">互联网</a>
-              <a href="#">汽车</a>
-              <a href="#">金融</a>
-              <a href="#">医疗</a>
-              <a href="#">文化艺术</a>
-              <a href="#">服装</a>
-              <a href="#">珠宝</a>
-              <a href="#">数码</a>
-              <a href="#">电脑</a>
-              <a href="#">APP</a>
-              <a href="#">地产</a>
-              <a href="#">旅行</a>
-              <a href="#">教育</a>
-              <a href="#">餐饮</a> -->
+              <a href="#" class="label label-primary">快消</a>
+              <a href="#" class="label label-primary">日化</a>
+              <a href="#" class="label label-primary">电商</a>
+              <a href="#" class="label label-primary">影视</a>
+              <a href="#" class="label label-primary">互联网</a>
+              <a href="#" class="label label-primary">汽车</a>
+              <a href="#" class="label label-primary">金融</a>
+              <a href="#" class="label label-primary">医疗</a>
+              <a href="#" class="label label-primary">文化艺术</a>
+              <a href="#" class="label label-primary">服装</a>
+              <a href="#" class="label label-primary">珠宝</a>
+              <a href="#" class="label label-primary">数码</a>
+              <a href="#" class="label label-primary">电脑</a>
+              <a href="#" class="label label-primary">APP</a>
+              <a href="#" class="label label-primary">地产</a>
+              <a href="#" class="label label-primary">旅行</a>
+              <a href="#" class="label label-primary">教育</a>
+              <a href="#" class="label label-primary">餐饮</a>
         </div>
     </div>
 </div>
